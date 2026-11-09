@@ -49,6 +49,9 @@ public String obterDescricao() {
     return descricao;
 }
 
+public LocalDate obterDataLimite() {
+        return dataLimite;
+    }
 public int obterEstimativaHoras() {
     return estimativaHoras;
 }
