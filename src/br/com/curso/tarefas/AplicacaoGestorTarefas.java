@@ -5,8 +5,21 @@ import br.com.curso.tarefas.dominio.Tarefa;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.List;
 
 public class AplicacaoGestorTarefas {
+
+    public int contarPendentes(List<Tarefa> tarefas) {
+        int quantidade = 0;
+
+        for (Tarefa tarefa : tarefas) {
+            if ("PENDENTE".equals(tarefa.obterSituacao())) {
+                quantidade++;
+            }
+        }
+
+        return quantidade;
+    }
     
     public static void main(String[] args) {
         Responsavel responsavel = new Responsavel();
