@@ -5,6 +5,7 @@ import br.com.curso.tarefas.dominio.Tarefa;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.Arrays;
 import java.util.List;
 
 public class AplicacaoGestorTarefas {
@@ -53,6 +54,12 @@ public class AplicacaoGestorTarefas {
                 LocalDate.of(2026, 10, 13),
                 new BigDecimal("80.00"),
                 responsavel);
+
+            AplicacaoGestorTarefas gestor = new AplicacaoGestorTarefas();
+            System.out.println("Tarefas pendentes: " + gestor.contarPendentes(Arrays.asList(
+                tarefaRevisarRequisitos,
+                tarefaImplementarTela,
+                tarefaValidarAplicacao)));
  
          System.out.println("- " + tarefaRevisarRequisitos.obterTitulo());
          System.out.println("- " + tarefaImplementarTela.obterTitulo());
